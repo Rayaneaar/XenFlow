@@ -1,16 +1,34 @@
-# React + Vite
+# 🍃 XenFlow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+XenFlow is a premium, minimalist visual Pomodoro timer designed to help you float into deep work. Combining modern aesthetic principles with natural ambient motion, XenFlow creates a serene digital workspace to maximize your productivity.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- ⏱️ **Visual Pomodoro Tracker** — A clean circular progress ring that fills smoothly as time progresses.
+- 🌊 **Atmospheric Backgrounds** — Beautiful, looping natural landscapes to create a calming focus environment.
+- 💎 **Glassmorphic UI** — Sleek, ultra-modern interface that blends seamlessly with the backdrop.
+- 🚀 **Built for Speed** — Extremely lightweight and blazing fast performance powered by Vite.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework:** React 19 & JSX
+- **Styling:** Tailwind CSS v4
+- **Bundler:** Vite
+- **Progress Ring:** React Circular Progressbar
 
-## Expanding the ESLint configuration
+## ⚙️ Quick Start
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Clone the repository and run the development server locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/zenflow.git
+
+# Navigate into the project folder
+cd zenflow
+
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev
