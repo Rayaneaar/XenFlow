@@ -5,7 +5,7 @@ import {
 } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-const work_time = 1 * 60 * 1000;
+const work_time = 60 * 60 * 1000;
 const break_time = 25 * 60 * 1000;
 export default function Pomodoro({ duration }) {
   const [mode, setMode] = useState("work");
