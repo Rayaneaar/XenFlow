@@ -16,19 +16,5 @@ XenFlow is a premium, minimalist visual Pomodoro timer designed to help you floa
 - **Bundler:** Vite
 - **Progress Ring:** React Circular Progressbar
 
-## ⚙️ Quick Start
-
-Clone the repository and run the development server locally:
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/zenflow.git
-
-# Navigate into the project folder
-cd zenflow
-
-# Install dependencies
-npm install
-
-# Start the dev server
-npm run dev
+## ⚙️ Visit this link to start using the app
+https://xen-flow-swart.vercel.app/
