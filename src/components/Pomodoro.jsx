@@ -5,7 +5,7 @@ import {
 } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-const work_time = 60 * 60 * 1000;
+const work_time = 0.3 * 60 * 1000;
 const break_time = 25 * 60 * 1000;
 export default function Pomodoro({ duration }) {
   const [mode, setMode] = useState("work");
@@ -44,13 +44,12 @@ export default function Pomodoro({ duration }) {
   const elapsed = totalDuration - timeLeft;
   const percentage = (elapsed / totalDuration) * 100;
   return (
-    <div className="w-64 h-64 mx-auto">
+    <div className="w-64 h-64 mx-auto ">
       <CircularProgressbarWithChildren
         value={percentage}
         strokeWidth={1}
         styles={buildStyles({
-          // Customizing colors
-          pathColor: "#000000",
+          pathColor: "#7f7f7f",
           trailColor: "#EBEBEB",
           textColor: "#000000",
           textSize: "27px",
@@ -58,7 +57,7 @@ export default function Pomodoro({ duration }) {
           pathTransitionDuration: 0.5,
         })}
       >
-        <h6 className="tracking-[0.4em]font-mono font-light text-[13px] uppercase">
+        <h6 className="text-[11px] font-bold uppercase tracking-[0.4em]  flex items-center gap-3 ">
           {mode == "work" ? "Deep Work" : "Break"}
         </h6>
         <span className="block text-8xl font-extralight  tracking-tighter">
