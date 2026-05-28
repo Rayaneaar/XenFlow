@@ -1,4 +1,4 @@
-# 🍃 XenFlow
+# 🍃 XenFlow v0.1
 
 XenFlow is a premium, minimalist visual Pomodoro timer designed to help you float into deep work. Combining modern aesthetic principles with natural ambient motion, XenFlow creates a serene digital workspace to maximize your productivity.
 
