@@ -96,37 +96,36 @@ export default function Todo() {
                 key={task.id} 
                 className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 hover:border-white/20 hover:bg-white/10 hover:scale-[1.02] transition-all duration-300 animate-task-slide-in"
               >
-              <div className="flex items-center gap-3">
-                {/* 🌟 Custom Premium Circular Glass Checkbox */}
-                <button
-                  type="button"
-                  onClick={() => toggleTask(task.id)}
-                  className={`w-5 h-5 rounded-full border flex items-center justify-center transition-all duration-300 cursor-pointer ${
-                    task.complete
-                      ? "bg-white border-white text-slate-950 scale-100"
-                      : "bg-transparent border-white/25 hover:border-white/50 scale-100 hover:scale-105"
-                  }`}
-                >
-                  {task.complete && (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="10"
-                      height="10"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="3.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                  )}
-                </button>
-                <span className={`text-xs transition-all duration-300 ${task.complete ? "line-through text-white/30" : "text-white/80"}`}>
-                  {task.text}
-                </span>
-              </div>
+                <div className="flex items-center gap-3">
+                  <button
+                    type="button"
+                    onClick={() => toggleTask(task.id)}
+                    className={`w-5 h-5 rounded-full border flex items-center justify-center transition-all duration-300 cursor-pointer ${
+                      task.complete
+                        ? "bg-white border-white text-slate-950 scale-100"
+                        : "bg-transparent border-white/25 hover:border-white/50 scale-100 hover:scale-105"
+                    }`}
+                  >
+                    {task.complete && (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        height="10"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="3.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    )}
+                  </button>
+                  <span className={`text-xs transition-all duration-300 ${task.complete ? "line-through text-white/30" : "text-white/80"}`}>
+                    {task.text}
+                  </span>
+                </div>
 
                 <button 
                   onClick={() => deleteTask(task.id)}
@@ -138,6 +137,18 @@ export default function Todo() {
             ))}
           </ul>
         )}
+
+        <div className="mt-2 flex items-center justify-between text-[10px] text-white/40 border-t border-white/5 pt-3">
+          <span className="hidden md:inline font-mono">Press ⌘K to manage tasks</span>
+          <button
+            onClick={() => setIsInputOpen(true)}
+            className="w-full md:w-auto px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white/80 hover:text-white transition text-[10px] font-bold uppercase tracking-wider cursor-pointer flex items-center justify-center gap-1.5"
+          >
+            <span className="md:hidden">Add New Task</span>
+            <span className="hidden md:inline font-semibold">Open Input</span>
+            <span className="px-1 py-0.5 rounded bg-white/15 text-[8px] font-mono font-normal">⌘K</span>
+          </button>
+        </div>
       </div>
 
       <div
