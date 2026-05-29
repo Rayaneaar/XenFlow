@@ -96,7 +96,7 @@ function App() {
           />
         ) : (
           <iframe
-            className="absolute top-1/2 left-1/2 w-[100vw] h-[100vh] -translate-x-1/2 -translate-y-1/2 object-cover pointer-events-none scale-[2.2] md:scale-[1.6]"
+            className="absolute top-1/2 left-1/2 w-[100vw] h-[100vh] -translate-x-1/2 -translate-y-1/2 object-cover pointer-events-none scale-[3.8] md:scale-[1.6]"
             src={`https://www.youtube.com/embed/${activeVideoId}?autoplay=1&mute=1&controls=0&disablekb=1&playsinline=1&loop=1&playlist=${activeVideoId}&modestbranding=1&rel=0&iv_load_policy=3&showinfo=0`}
             frameBorder="0"
             allow="autoplay; encrypted-media"
