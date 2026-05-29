@@ -5,12 +5,13 @@ import {
 } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-const work_time = 0.3 * 60 * 1000;
-const break_time = 25 * 60 * 1000;
-export default function Pomodoro({ duration }) {
+export default function Pomodoro({ workTimeValue, breakTimeValue }) {
+  const work_time = workTimeValue * 60 * 1000;
+  const break_time = breakTimeValue * 60 * 1000;
   const [mode, setMode] = useState("work");
   const [timeLeft, setTimeLeft] = useState(work_time);
   const [isRunning, setIsRunning] = useState(false);
+
   useEffect(() => {
     let timerId;
     if (isRunning && timeLeft > 0) {
@@ -43,8 +44,14 @@ export default function Pomodoro({ duration }) {
   const totalDuration = mode === "work" ? work_time : break_time;
   const elapsed = totalDuration - timeLeft;
   const percentage = (elapsed / totalDuration) * 100;
+  useEffect(() => {
+    if (!isRunning) {
+      setTimeLeft(mode === "work" ? work_time : break_time);
+    }
+  }, [workTimeValue, breakTimeValue, mode]);
   return (
     <div className="w-64 h-64 mx-auto ">
+
       <CircularProgressbarWithChildren
         value={percentage}
         strokeWidth={1}
@@ -66,7 +73,7 @@ export default function Pomodoro({ duration }) {
       </CircularProgressbarWithChildren>
       <button
         onClick={() => setIsRunning(!isRunning)}
-        className="text-center mx-auto  text-white p-3 rounded-xs  hover:scale-110 transition-all duration-500 cursor-pointer flex justify-center mt-9"
+        className="text-center mx-auto text-white/90 hover:text-white px-8 py-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/15 hover:border-white/30 shadow-lg hover:scale-105 transition-all duration-500 cursor-pointer flex justify-center mt-12 font-mono text-xs tracking-[0.25em] uppercase"
       >
         {isRunning ? "Pause" : "START"}
       </button>
